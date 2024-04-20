@@ -76,5 +76,6 @@ public class App {
         // rectangulo1.calcularArea());
         // triangulo1.calcularArea();
 
+        input.close();
     }
 }
