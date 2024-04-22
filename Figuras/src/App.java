@@ -17,7 +17,7 @@ public class App {
             System.out.println("2)Mostrar figuras");
             System.out.println("3)Salir");
             System.out.println("====================");
-            menu = input.nextInt();
+            menu = input.nextInt(); 
             if (menu == 1) {
                 System.out.println("Que figuras deseas cargar ?");
                 System.out.println("1)Circulo ");
@@ -25,7 +25,7 @@ public class App {
                 System.out.println("3)Triangulo ");
                 menuDos = input.nextInt();
                 // MENU INTERNO PARA CARGAR LAS FIGURAS
-                // ===============================================
+                // =========================================================================
                 while (true) {
                     if (menuDos == 1) {
                         System.out.println("Ingrese el radio del circulo: ");
@@ -54,7 +54,7 @@ public class App {
                 }
             }
             // ACA SIGUE EL MENU GENERAL
-            // ===========================================================
+            // ===============================================================================
             else if (menu == 2) {
                 for (int i = 0; i < 3; i++) {
                     System.out.println(
