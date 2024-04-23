@@ -25,4 +25,9 @@ public class Circulo extends Figura{
         return this.PI*this.radio*this.radio;
     }
 
+    @Override
+    protected String toString(){
+        System
+    }
+
 }
