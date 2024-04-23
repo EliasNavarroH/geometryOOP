@@ -26,8 +26,8 @@ public class Circulo extends Figura{
     }
 
     @Override
-    protected String toString(){
-        System
+    public String toString(){
+       return "Nombre de la figura: " + getNombre() + " Area de la figura: " + this.calcularArea();
     }
 
 }

@@ -28,6 +28,9 @@ public class Rectangulo extends Figura{
     protected double calcularArea() {
         return this.base*this.altura;
     }
-
+    @Override
+    public String toString(){
+       return "Nombre de la figura: " + this.nombre + " Area de la figura: " + this.calcularArea();
+    }
     
 }

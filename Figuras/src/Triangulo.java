@@ -28,6 +28,9 @@ public class Triangulo extends Figura {
         return (this.base*this.altura)/2;
         // Agregar metodo Math para redondear 
     }
-
+    @Override
+    public String toString(){
+       return "Nombre de la figura: " + this.nombre + " Area de la figura: " + this.calcularArea();
+    }
     
 }
