@@ -32,5 +32,19 @@ public class Triangulo extends Figura {
     public String toString(){
        return "Nombre de la figura: " + this.nombre + " Area de la figura: " + this.calcularArea();
     }
-    
+
+    @Override
+    public boolean equals(Object obj){
+        if (this == obj) {
+            return true;
+        }
+
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+
+        Triangulo t = (Triangulo) obj;
+        return this.altura == t.altura && this.base == t.base;
+    }
+       
 }
