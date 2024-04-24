@@ -143,8 +143,11 @@ public class App {
     }
 
     private static boolean figurasIguales(Figura[] figuras, int figuraActual) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'figurasIguales'");
+        for(int i = 0 ; i < figuraActual ; i++){
+            if (figuras[i].equals(figuras[figuraActual])) {
+                
+            }
+        }
     }
 
 }
