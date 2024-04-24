@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -24,6 +25,11 @@ public class App {
                     mostrarFiguras(figuras, figuraActual);
                 break;
                 case 3:
+                    figuras = eliminarFigura(figuras);
+                break;
+                case 4:
+                break;
+                case 5:
                     System.out.println("=============================");
                     System.out.println("Hasta Luego");
                     System.out.println("=============================");
@@ -124,4 +130,19 @@ public class App {
             System.out.println(figuras[i].toString());
         }
     }
+
+
+    public static Figura[] eliminarFigura(Figura[] figuras){
+        if (figuras.length == 0 || figuras == null) {
+            return figuras;
+        }
+        Figura [] nuevasFiguras = new Figura[figuras.length - 1];
+
+        for(int i = 0; i < nuevasFiguras.length ;i++){
+            nuevasFiguras[i] = figuras[i];
+        }
+        return nuevasFiguras;
+    }
+
+
 }
