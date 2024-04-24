@@ -27,10 +27,10 @@ public class App {
                 figuraActual = borrarUltimaFigura(figuras, figuraActual);
                 break;
                 case 4:
-                if(figurasIguales(figuras, figuraActual));
+                if(figurasIguales(figuras, figuraActual)){
                    System.out.println("Hay figuras iguales ");
-                else
-                   System.out.println("No hay figuras iguales ");  
+                }else
+                System.out.println("No hay figuras iguales ");
                 break;
                 case 9:
                     System.out.println("=============================");
@@ -143,11 +143,11 @@ public class App {
     }
 
     private static boolean figurasIguales(Figura[] figuras, int figuraActual) {
-        for(int i = 0 ; i < figuraActual ; i++){
-            if (figuras[i].equals(figuras[figuraActual])) {
-                
-            }
+        for(int i = 0 ; i < figuraActual - 1 ; i++){
+            if (figuras[i].equals(figuras[figuraActual - 1]))
+               return true;
         }
+        return false;
     }
 
 }
