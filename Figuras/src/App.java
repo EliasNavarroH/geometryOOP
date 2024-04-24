@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.ArrayList;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -13,7 +12,7 @@ public class App {
                                                        // longitud que tendra
         int figuraActual = 0;
         int opcion = 0;
-        while (opcion != 3) {
+        while (opcion != 9) {
             menuPrincipal();
             opcion = input.nextInt();
             input.nextLine();
@@ -25,11 +24,15 @@ public class App {
                     mostrarFiguras(figuras, figuraActual);
                 break;
                 case 3:
-                    figuras = eliminarFigura(figuras);
+                figuraActual = borrarUltimaFigura(figuras, figuraActual);
                 break;
                 case 4:
+                if(figurasIguales(figuras, figuraActual));
+                   System.out.println("Hay figuras iguales ");
+                else
+                   System.out.println("No hay figuras iguales ");  
                 break;
-                case 5:
+                case 9:
                     System.out.println("=============================");
                     System.out.println("Hasta Luego");
                     System.out.println("=============================");
@@ -49,7 +52,9 @@ public class App {
         System.out.println("====================================================");
         System.out.println("1)Ingresar figura");
         System.out.println("2)Mostrar figuras");
-        System.out.println("3)Salir");
+        System.out.println("3)Eliminar ultima figura");
+        System.out.println("4)Buscar figuras iguales");
+        System.out.println("9)Salir");
         System.out.println("=====================================================");
 
     }
@@ -131,18 +136,15 @@ public class App {
         }
     }
 
-
-    public static Figura[] eliminarFigura(Figura[] figuras){
-        if (figuras.length == 0 || figuras == null) {
-            return figuras;
-        }
-        Figura [] nuevasFiguras = new Figura[figuras.length - 1];
-
-        for(int i = 0; i < nuevasFiguras.length ;i++){
-            nuevasFiguras[i] = figuras[i];
-        }
-        return nuevasFiguras;
+    private static int borrarUltimaFigura(Figura[] figuras, int figuraActual) {
+        figuras[figuraActual-1] = null; //con el menos 1 accede al ultimo array de la lista
+        figuraActual --;
+        return figuraActual;
     }
 
+    private static boolean figurasIguales(Figura[] figuras, int figuraActual) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'figurasIguales'");
+    }
 
 }
