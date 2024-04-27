@@ -144,7 +144,7 @@ public class App {
 
     private static boolean figurasIguales(Figura[] figuras, int figuraActual) {
         for (int i = 0; i < figuraActual; i++) {
-            for (int j = 1; j < figuraActual; j++)
+            for (int j = i + 1; j < figuraActual; j++)
                 if (figuras[i].equals(figuras[j])) {
                     System.out.print("La figura " + figuras[i] + " es igual a la figura " + figuras[j]);
                     return true;
