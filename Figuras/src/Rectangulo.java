@@ -26,8 +26,26 @@ public class Rectangulo extends Figura{
 
     @Override
     protected double calcularArea() {
-        return this.base*this.altura;
+        return Math.round(this.base*this.altura);
+    }
+    @Override
+    public String toString(){
+       return "Nombre: " + this.nombre + " Area de la figura: " + this.calcularArea();
     }
 
+    @Override
+    public boolean equals(Object obj){
+        if (this == obj) {
+            return true;
+        }
+
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+
+        Rectangulo r = (Rectangulo) obj;
+        return this.altura == r.altura && this.base == r.base;
+    }
     
 }
+    

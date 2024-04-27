@@ -25,8 +25,26 @@ public class Triangulo extends Figura {
 
     @Override
     protected double calcularArea() {
-        return (this.base*this.altura)/2;
+        return Math.round((this.base*this.altura)/2);
+        // Agregar metodo Math para redondear 
+    }
+    @Override
+    public String toString(){
+       return "Nombre: " + this.nombre + " Area de la figura: " + this.calcularArea();
     }
 
-    
+    @Override
+    public boolean equals(Object obj){
+        if (this == obj) {
+            return true;
+        }
+
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+
+        Triangulo t = (Triangulo) obj;
+        return this.altura == t.altura && this.base == t.base;
+    }
+       
 }
