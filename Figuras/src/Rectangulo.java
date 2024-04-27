@@ -30,7 +30,7 @@ public class Rectangulo extends Figura{
     }
     @Override
     public String toString(){
-       return "Nombre de la figura: " + this.nombre + " Area de la figura: " + this.calcularArea();
+       return "Nombre: " + this.nombre + " Area de la figura: " + this.calcularArea();
     }
 
     @Override
