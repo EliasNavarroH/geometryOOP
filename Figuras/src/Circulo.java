@@ -22,12 +22,12 @@ public class Circulo extends Figura{
 
     @Override
     protected double calcularArea() {
-        return this.PI*this.radio*this.radio;
+        return Math.round(this.PI*this.radio*this.radio);
     }
 
     @Override
     public String toString(){
-       return "Nombre: " + this.nombre + " Area de la figura: " + this.calcularArea();
+       return "Nombre del circulo: " + this.nombre + " Area: " + this.calcularArea();
     }
 
     @Override

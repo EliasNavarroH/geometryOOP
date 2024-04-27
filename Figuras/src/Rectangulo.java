@@ -26,7 +26,7 @@ public class Rectangulo extends Figura{
 
     @Override
     protected double calcularArea() {
-        return this.base*this.altura;
+        return Math.round(this.base*this.altura);
     }
     @Override
     public String toString(){

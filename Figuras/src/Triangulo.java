@@ -25,7 +25,7 @@ public class Triangulo extends Figura {
 
     @Override
     protected double calcularArea() {
-        return (this.base*this.altura)/2;
+        return Math.round((this.base*this.altura)/2);
         // Agregar metodo Math para redondear 
     }
     @Override
